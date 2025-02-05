@@ -38,7 +38,7 @@ Check the `pubspec.yaml` file for the full list.
 
 1. **Clone the repository:**  
    ```bash
-   git clone https://github.com/your-repo/ai-rizz-app.git
+   git clone https://github.com/Qasim-afzaal/ai-rizz-app.git
    ```
 
 2. **Navigate to the project directory:**  
