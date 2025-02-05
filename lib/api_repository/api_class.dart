@@ -63,7 +63,6 @@ class HttpUtil {
       headers: {
         'Authorization': "Bearer $token",
       },
-      // contentType: 'application/json; charset=utf-8',
       responseType: ResponseType.json,
     );
 
@@ -110,59 +109,23 @@ class HttpUtil {
 
   createErrorEntity(DioError error) {
     Loading.dismiss();
-    // if (utils.isValidationEmpty(error.message)) {
-    //   errorEntity(code: 0, message: "Your internet is not available, please try again later");
-    // }
 
     switch (error.type) {
-      // case DioErrorType.cancel:
-      //   errorEntity(code: -1, message: "Request to server was cancelled");
-      //   break;
-      // case DioErrorType.connectionTimeout:
-      //   errorEntity(code: -2, message: "Connection timeout with server");
-      //   break;
-      // case DioErrorType.sendTimeout:
-      //   errorEntity(code: -3, message: "Send timeout in connection with server");
-      //   break;
-      // case DioErrorType.receiveTimeout:
-      //   errorEntity(code: -4, message: "Receive timeout in connection with server");
-      //   break;
+
       case DioErrorType.badResponse:
         {
           try {
             int errCode =
                 error.response != null ? error.response!.statusCode! : 00;
             switch (errCode) {
-              // case 400:
-              // errorEntity(code: errCode, message: "Request syntax error");
-              // break;
+       
               case 401:
                 errorEntity(code: errCode, message: "Permission denied");
                 break;
-              // case 403:
-              //   errorEntity(code: errCode, message: "Server refuses to execute");
-              //   break;
-              // case 404:
-              //   errorEntity(code: errCode, message: "Can not reach server");
-              //   break;
-              // case 405:
-              //   errorEntity(code: errCode, message: "Request method is forbidden");
-              //   break;
-              // case 500:
-              //   errorEntity(code: errCode, message: "Internal server error");
-              //   break;
-              // case 502:
-              //   errorEntity(code: errCode, message: "Invalid request");
-              //   break;
-              // case 503:
-              //   errorEntity(code: errCode, message: "Server hangs");
-              //   break;
-              // case 505:
-              //   errorEntity(code: errCode, message: "HTTP protocol requests are not supported");
-              //   break;
+              
               default:
                 utils.showToast(message: error.response!.data['message']);
-              // errorEntity(code: errCode, message: error.response != null ? error.response!.data! : "");
+            
             }
           } on Exception catch (_) {
             errorEntity(code: 0, message: "Unknown mistake");
@@ -224,9 +187,7 @@ class HttpUtil {
 
     var response = await dio.get(
       path,
-      // queryParameters: queryParameters,
-      // options: options,
-      // cancelToken: cancelToken,
+
     );
     return response;
   }
@@ -242,13 +203,10 @@ class HttpUtil {
     Options requestOptions = options ??
         Options(
           receiveTimeout: Duration(minutes: 10),
-          // headers: Constants.headers,
-          // contentType: 'application/json; charset=utf-8',
+        
           responseType: ResponseType.json,
         );
-    // String dummy = jsonEncode();
 
-    // print("withOutFormData-->$withOutFormData");
     var response = await dio.post(
       path,
       data: data ?? withOutFormData,
