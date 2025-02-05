@@ -20,7 +20,6 @@ void main() async {
   await Firebase.initializeApp(); 
   Loading();
   Utils.screenPortrait();
-//  Get.lazyPut<SocketService>(() => SocketService(), fenix: true);
   runApp(const MyApp());
 }
 
