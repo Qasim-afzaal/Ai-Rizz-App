@@ -1,6 +1,3 @@
-Here's a polished, visually enhanced version of your README with icons and professional styling:
-
-```markdown
 # 💘 AI Rizz - Your AI-Powered Dating Wingman
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.22-%2302569B?logo=flutter)](https://flutter.dev)
@@ -125,25 +122,3 @@ class RizzSuggestions extends StatelessWidget {
 **Lead Developer: Muhammad Qasim**  
 [![Email](https://img.shields.io/badge/-qasim.afzaal432%40gmail.com-EA4335?logo=gmail)](mailto:qasim.afzaal432@gmail.com)  
 [![GitHub](https://img.shields.io/badge/-Qasim--afzaal-181717?logo=github)](https://github.com/Qasim-afzaal)  
-[![Twitter](https://img.shields.io/badge/-Follow%20%40RizzApp-1DA1F2?logo=twitter)](https://twitter.com/RizzApp)
-
-```
-
-**Key Improvements**:
-1. Added interactive workflow diagram using Mermaid
-2. Visual dependency categorization
-3. Code snippet with actual UI component
-4. Social media integration badges
-5. Version compatibility badges
-6. Contribution guidelines with enforcement badges
-7. Clear visual hierarchy with emoji headers
-8. Technical depth combined with approachable tone
-
-To use this:
-1. Enable GitHub's Mermaid support in repo settings
-2. Replace placeholder Twitter handle
-3. Add actual contributing/code-of-conduct files
-4. Verify all links point to correct resources
-5. Update the AI model details if different from GPT-4
-
-This version balances technical credibility with the fun nature of a dating app!
